@@ -15,7 +15,7 @@ const Login = () => {
         [...elements].forEach(elm => {
             if (elm.tagName === 'INPUT') {
                 const input = elm as HTMLInputElement;
-                if(!input.value) isLogeIin = false;
+                if (!input.value) isLogeIin = false;
             }
         })
         if (isLogeIin) {
@@ -25,8 +25,8 @@ const Login = () => {
     };
     return (
         <form onSubmit={handleSubmit}>
-            <input  type="text" name='username'/>
-            <input  type="password" name='password'/>
+            <input type="text" name='username'/>
+            <input type="password" name='password'/>
             <button type='submit'>Login</button>
         </form>
     );
