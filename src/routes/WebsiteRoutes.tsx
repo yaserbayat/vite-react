@@ -1,7 +1,7 @@
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import PrivateRoute from 'src/components/PrivateRoute';
 import NotFound from 'src/routes/NotFound';
-import React from 'react';
 import loadable from '@loadable/component';
 
 const fallback = <div>loading...</div>;
