@@ -1,5 +1,6 @@
 import React, { FormEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import './style.less';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ const Login = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='login-form'>
       <input type="text" name="username" />
       <input type="password" name="password" />
       <button type="submit">Login</button>
