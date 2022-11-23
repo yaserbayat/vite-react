@@ -1,6 +1,6 @@
 import React, { FormEvent } from 'react';
+import {Button, Form} from "react-bootstrap";
 import { useLocation, useNavigate } from 'react-router-dom';
-import './style.less';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -28,11 +28,16 @@ const Login = () => {
     }
   };
   return (
-    <form onSubmit={handleSubmit} className='login-form'>
-      <input type="text" name="username" />
-      <input type="password" name="password" />
-      <button type="submit">Login</button>
-    </form>
+    <Form onSubmit={handleSubmit} className='col-12 col-sm-6 col-md-3 mx-auto vh-100 d-flex flex-column justify-content-center'>
+      <h1 className='text-center'>Welcome</h1>
+      <Form.Group className='mb-3'>
+        <Form.Control type="text" name='username' placeholder="Enter your username" />
+      </Form.Group>
+      <Form.Group className='mb-3'>
+        <Form.Control type="password" name="password" placeholder="Enter your password" />
+      </Form.Group>
+      <Button type="submit" className=''>Login</Button>
+    </Form>
   );
 };
 
