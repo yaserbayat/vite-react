@@ -1,10 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
+import ColorPallet from "src/components/ColorPallet";
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+
     return (
-        <div>
-            This is home.
-        </div>
+        <>
+          <div>
+            <button onClick={() => setOpen(true)}>Change color</button>
+          </div>
+          <ColorPallet open={open} onClose={() => setOpen(false)}/>
+        </>
     );
 };
 
